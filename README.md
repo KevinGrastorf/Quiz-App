@@ -1,4 +1,4 @@
-# new_app_2
+# First Flutter App (Course Project)
 
 A new Flutter project.
 
