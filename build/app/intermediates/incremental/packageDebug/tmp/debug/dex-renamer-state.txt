@@ -1,0 +1,4 @@
+#Sat Oct 17 16:11:07 MDT 2020
+base.0=/Users/kevingrastorf/AndroidStudioProjects/new_app_2/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
