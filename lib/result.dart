@@ -6,8 +6,8 @@ class Result extends StatelessWidget {
 
   Result(this.resultScore, this.resetHandler);
 
-  String get resultPhrase {
-    String resultText;
+  String? get resultPhrase {
+    String? resultText;
     if (resultScore >= 23) {
       resultText = 'You are amazing!';
     } else if (resultScore >= 17 && resultScore < 23) {
@@ -32,7 +32,7 @@ class Result extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              resultPhrase,
+              resultPhrase!,
               style: TextStyle(
                 fontSize: 50,
                 color: Colors.purple[700],
@@ -46,7 +46,7 @@ class Result extends StatelessWidget {
               padding: EdgeInsets.all(50),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25.0),
-                side: BorderSide(color: Colors.purple[100], width: 7),
+                side: BorderSide(color: Colors.purple[100]!, width: 7),
               ),
               color: Colors.purple,
               child: Text(
@@ -54,7 +54,7 @@ class Result extends StatelessWidget {
                 style: TextStyle(color: Colors.white, fontSize: 30),
                 textAlign: TextAlign.center,
               ),
-              onPressed: resetHandler,
+              onPressed: resetHandler as void Function()?,
             )
           ],
         ),

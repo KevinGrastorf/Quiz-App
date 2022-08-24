@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
   final Function selectHandler;
-  final String answerText;
+  final String? answerText;
 
   Answer(this.selectHandler, this.answerText);
 
@@ -15,15 +15,15 @@ class Answer extends StatelessWidget {
       child: RaisedButton(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25.0),
-            side: BorderSide(color: Colors.purple[100], width: 7),
+            side: BorderSide(color: Colors.purple[100]!, width: 7),
           ),
           color: Colors.purple,
           child: Text(
-            answerText,
+            answerText!,
             style: TextStyle(color: Colors.white, fontSize: 30),
             textAlign: TextAlign.center,
           ),
-          onPressed: selectHandler),
+          onPressed: selectHandler as void Function()?),
     );
   }
 }
