@@ -42,19 +42,24 @@ class Result extends StatelessWidget {
             Divider(
               height: 50,
             ),
-            RaisedButton(
-              padding: EdgeInsets.all(50),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(25.0),
-                side: BorderSide(color: Colors.purple[100]!, width: 7),
+            Container(
+              width: 250,
+              height: 100,
+              margin: EdgeInsets.all(20),
+              child: ElevatedButton(
+                // padding: EdgeInsets.all(50),
+                // shape: RoundedRectangleBorder(
+                //   borderRadius: BorderRadius.circular(25.0),
+                //   side: BorderSide(color: Colors.purple[100]!, width: 7),
+                // ),
+                // color: Colors.purple,
+                child: Text(
+                  'Reset Quiz',
+                  style: TextStyle(color: Colors.white, fontSize: 30),
+                  textAlign: TextAlign.center,
+                ),
+                onPressed: resetHandler as void Function()?,
               ),
-              color: Colors.purple,
-              child: Text(
-                'Reset Quiz',
-                style: TextStyle(color: Colors.white, fontSize: 30),
-                textAlign: TextAlign.center,
-              ),
-              onPressed: resetHandler as void Function()?,
             )
           ],
         ),
